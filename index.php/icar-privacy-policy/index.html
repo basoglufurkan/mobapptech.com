@@ -189,7 +189,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 		<p class="wp-block-paragraph">Last updated</p>
 		
 		
-		<div class="mt-date-published wp-block-post-date"><time datetime="2026-10-08T07:38:43+00:00">October 8, 2026</time></div>
+		<div class="mt-date-published wp-block-post-date"><time datetime="2026-10-11T11:18:18+00:00">October 11, 2026</time></div>
 	</div>
 	
 	<div class="entry-content mt-prose wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
@@ -205,7 +205,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<ul class="wp-block-list"><li><strong>No account, no personal information.</strong> iCar never asks for your name, email address or phone number, and we don’t store personal information about you.</li><li><strong>Your things stay on your iPhone.</strong> Widgets, themes, photos, videos, playlists and settings never leave your device.</li><li><strong>No tracking, no ads, no selling.</strong> We don’t track you across apps or websites, show ads or sell data. We never collect your location or driving data.</li><li><strong>AI features only send what you choose.</strong> When you use one, only the photo or text you pick is sent to create the result — and we don’t keep it.</li></ul>
+<ul class="wp-block-list"><li><strong>No account, no personal information.</strong> iCar never asks for your name, email address or phone number, and we don’t store personal information about you.</li><li><strong>Your things stay on your iPhone.</strong> Widgets, themes, photos, videos, playlists and settings never leave your device.</li><li><strong>No tracking, no ads, no selling.</strong> We don’t track you across apps or websites, show ads or sell data. We never collect your precise location or driving data, and we never collect the advertising identifier (IDFA).</li><li><strong>Subscriptions go through Apple.</strong> Your payment details stay with Apple; we only see whether your iCar PRO subscription is active.</li><li><strong>AI features only send what you choose.</strong> We ask for your permission first, then only the photo or text you pick is sent to create the result — and we don’t keep it.</li></ul>
 
 
 </div>
@@ -220,7 +220,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<ul class="wp-block-list"><li>Your widgets, themes, settings, favourites and saved designs, including any photos you add to them</li><li>Sounds you create or choose for your car</li><li>IPTV playlists and channel favourites you import — playlist addresses can contain your provider’s login details, so we never upload or log them</li><li>Videos you open from Photos or Files. iCar only accesses the items you select; it never asks for access to your whole photo library.</li><li>Screen broadcast frames, which are processed on your device only. The microphone is not used.</li></ul>
+<ul class="wp-block-list"><li>Your widgets, themes, settings, favourites and saved designs, including any photos and videos you add to them</li><li>Your language, appearance and consent choices</li><li>Sounds you create or choose for your car</li><li>IPTV playlists and channel favourites you import — playlist addresses can contain your provider’s login details, so we never upload or log them</li><li>Videos you open from Photos or Files. iCar only accesses the items you select; it never asks for access to your whole photo library.</li><li>Screen broadcast frames, which are kept on your device only for the in-app preview and deleted when the broadcast ends. Nothing is recorded, frames are never sent over the internet and the microphone is not used.</li></ul>
 
 
 
@@ -236,7 +236,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">When iCar starts, it creates a random, anonymous ID with Firebase Authentication. It isn’t linked to your name, email, Apple ID or phone number. We use it for one thing: counting how many AI images and voice clips have been created today, so the daily limits stay fair for everyone.</p>
+<p class="wp-block-paragraph">When iCar starts, it creates a random, anonymous ID with Firebase Authentication. It isn’t linked to your name, email, Apple ID or phone number. We use it for two things: counting how many AI images and voice clips have been created today, so the daily limits stay fair for everyone, and recognising your iCar PRO subscription. Only the date and that day’s count are stored with it.</p>
 
 
 
@@ -244,7 +244,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">If you create an AI widget, the photo you select, a picture of the car you picked and a short style instruction are sent through our server functions (Google Cloud, Europe) to <strong>fal.ai</strong>, which runs an image model made by <strong>OpenAI</strong>. The finished image is returned through a temporary link and saved on your iPhone. <strong>We don’t store your photo.</strong> Please only use photos you have the right to use, and don’t upload photos of other people without their permission.</p>
+<p class="wp-block-paragraph">If you create an AI widget, the photo you select, a picture of the car you picked and a short style instruction are sent through our server functions (Google Cloud, Europe) to <strong>fal.ai</strong>, which runs an image model made by <strong>OpenAI</strong>. The finished image is returned through a temporary link and saved on your iPhone. We ask for your explicit consent before your first photo is sent. <strong>We don’t store your photo</strong>; fal.ai and OpenAI may keep it for the period stated in their own privacy policies, to provide the service and prevent abuse. Please only use photos you have the right to use, and don’t upload photos of other people without their permission.</p>
 
 
 
@@ -252,7 +252,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">If you create a voice clip, the text you type and the voice you choose are sent through our server functions to <strong>ElevenLabs</strong> to generate the audio, which is returned to your iPhone. <strong>We don’t store your text.</strong> Please avoid typing sensitive personal information.</p>
+<p class="wp-block-paragraph">If you create a voice clip, the text you type and the voice you choose are sent through our server functions to <strong>ElevenLabs</strong> to generate the audio, which is returned to your iPhone. We ask for your explicit consent before your first text is sent. <strong>We don’t store your text</strong>; ElevenLabs may keep it for a limited time under its own privacy policy. Please avoid typing sensitive personal information.</p>
 
 
 
@@ -260,7 +260,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">When you pick a car, we fetch matching images from <strong>CarImagesAPI</strong> through our server functions. Only the make and model are sent — nothing about you. The images are kept in a shared catalogue so they load faster for everyone.</p>
+<p class="wp-block-paragraph">When you pick a car, we fetch matching images from <strong>CarImagesAPI</strong> through our server functions. Only the make, model and generation are sent — nothing about you. The images are kept in a shared catalogue so they load faster for everyone.</p>
 
 
 
@@ -272,11 +272,27 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<h3 class="wp-block-heading">2.6 Basic app statistics</h3>
+<h3 class="wp-block-heading">2.6 iCar PRO subscription</h3>
 
 
 
-<p class="wp-block-paragraph">Firebase collects basic, anonymous statistics such as app opens, session length, device model, iOS version, app version and approximate country. They help us keep iCar fast and working well. They are not linked to your identity and are never used for advertising. Firebase also delivers app settings (Remote Config) and checks that requests come from a genuine copy of iCar (App Check).</p>
+<p class="wp-block-paragraph">iCar PRO is bought through the App Store, so your payment details stay with Apple and never reach us. We use <strong>RevenueCat</strong> to manage subscriptions: your anonymous app ID and the purchase history the App Store reports (product, dates, renewal and cancellation status) are shared with RevenueCat so we can recognise, restore and unlock your subscription. You can manage or cancel it any time in your Apple ID settings.</p>
+
+
+
+<h3 class="wp-block-heading">2.7 Usage statistics</h3>
+
+
+
+<p class="wp-block-paragraph">To improve iCar we use <strong>Google Analytics for Firebase</strong>. It collects which screens and features are used (for example sound previews, adding widgets or the subscription screen), a random per-install app ID, device model, iOS version, app version and an approximate country or city derived from your IP address. To understand renewals and cancellations, that random app ID is also shared with RevenueCat. These statistics are not linked to your name, email or Apple ID, the advertising identifier is never collected, and nothing is used for advertising or tracking. Analytics data is kept for at most 14 months.</p>
+
+
+
+<h3 class="wp-block-heading">2.8 App settings and integrity checks</h3>
+
+
+
+<p class="wp-block-paragraph">Firebase delivers app settings (Remote Config). Firebase App Check, together with Apple’s App Attest and DeviceCheck, confirms that requests to our server come from a genuine copy of iCar. These checks contain no personal information.</p>
 
 
 
@@ -288,7 +304,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-table mt-table"><table><thead><tr><th>What</th><th>Why</th></tr></thead><tbody><tr><td>Anonymous app ID with today’s AI image and voice counters</td><td>Applies the daily limits</td></tr><tr><td>Shared catalogue of car images</td><td>Faster loading — contains nothing about you</td></tr></tbody></table></figure>
+<figure class="wp-block-table mt-table"><table><thead><tr><th>What</th><th>Why</th></tr></thead><tbody><tr><td>Anonymous app ID with today’s date and AI image and voice counters</td><td>Applies the daily limits</td></tr><tr><td>Shared catalogue of car images</td><td>Faster loading — contains nothing about you</td></tr></tbody></table></figure>
 
 
 
@@ -308,7 +324,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-table mt-table"><table><thead><tr><th>Provider</th><th>Purpose</th><th>Privacy policy</th></tr></thead><tbody><tr><td>Google Firebase</td><td>Anonymous ID, basic statistics, app settings, app integrity checks, database and server functions</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr><tr><td>fal.ai</td><td>Runs AI image generation</td><td><a href="https://fal.ai/privacy">fal.ai/privacy</a></td></tr><tr><td>OpenAI</td><td>Provides the image model used through fal.ai</td><td><a href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a></td></tr><tr><td>ElevenLabs</td><td>Text-to-speech</td><td><a href="https://elevenlabs.io/privacy-policy">elevenlabs.io/privacy-policy</a></td></tr><tr><td>CarImagesAPI</td><td>Car pictures (no personal data)</td><td><a href="https://carimagesapi.com">carimagesapi.com</a></td></tr></tbody></table></figure>
+<figure class="wp-block-table mt-table"><table><thead><tr><th>Provider</th><th>Purpose</th><th>Privacy policy</th></tr></thead><tbody><tr><td>Google Firebase</td><td>Anonymous ID, app settings, app integrity checks, database and server functions</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr><tr><td>Google Analytics for Firebase</td><td>Usage statistics</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr><tr><td>RevenueCat</td><td>Subscription management</td><td><a href="https://www.revenuecat.com/privacy/">revenuecat.com/privacy</a></td></tr><tr><td>Apple</td><td>App Store purchases, App Attest and DeviceCheck</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr><tr><td>fal.ai</td><td>Runs AI image generation</td><td><a href="https://fal.ai/privacy">fal.ai/privacy</a></td></tr><tr><td>OpenAI</td><td>Provides the image model used through fal.ai</td><td><a href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a></td></tr><tr><td>ElevenLabs</td><td>Text-to-speech</td><td><a href="https://elevenlabs.io/privacy-policy">elevenlabs.io/privacy-policy</a></td></tr><tr><td>CarImagesAPI</td><td>Car pictures (no personal data)</td><td><a href="https://carimagesapi.com">carimagesapi.com</a></td></tr></tbody></table></figure>
 
 
 
@@ -320,7 +336,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<ul class="wp-block-list"><li><strong>On your iPhone:</strong> until you delete it or the app.</li><li><strong>Anonymous ID and counters:</strong> while you use iCar. Ask us any time and we’ll delete them.</li><li><strong>Photos and text sent to AI features:</strong> not stored by us. Our providers process them to return the result and keep them only as their own policies allow.</li><li><strong>Basic statistics:</strong> for a limited period, according to Firebase’s retention settings.</li></ul>
+<ul class="wp-block-list"><li><strong>On your iPhone:</strong> until you delete it or the app.</li><li><strong>Anonymous ID and counters:</strong> while you use iCar. Ask us any time and we’ll delete them.</li><li><strong>Photos and text sent to AI features:</strong> not stored by us. Our providers process them to return the result and keep them only as their own policies allow.</li><li><strong>Usage statistics:</strong> at most 14 months.</li><li><strong>Subscription records:</strong> kept by Apple and RevenueCat while needed to manage your subscription and as the law requires.</li></ul>
 
 
 
@@ -344,11 +360,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">Because iCar doesn’t store personal information about you, there is usually nothing to access or correct. You can still ask us to delete the anonymous ID and its counters, or ask any question about your privacy, at <a href="mailto:support@mobapptech.com">support@mobapptech.com</a> — we reply within 30 days. Depending on where you live (for example the European Economic Area, the United Kingdom or California), you have the right to access, delete or object to the processing of your information, and to complain to your local data protection authority.</p>
+<p class="wp-block-paragraph">Because iCar doesn’t store personal information about you, there is usually nothing to access or correct. You can still ask us to delete the anonymous ID and its counters, object to usage statistics, or ask any question about your privacy, at <a href="mailto:support@mobapptech.com">support@mobapptech.com</a> — we reply within 30 days. Depending on where you live (for example Türkiye under KVKK, the European Economic Area, the United Kingdom or California), you have the right to access, delete or object to the processing of your information, and to complain to your local data protection authority.</p>
 
 
 
-<p class="wp-block-paragraph">If you are in the EEA or the UK, we rely on <strong>contract</strong> (providing the features you choose to use, including sending your photo or text to our AI providers when you use AI features) and <strong>legitimate interests</strong> (security, fair-use limits and basic statistics).</p>
+<p class="wp-block-paragraph">If you are in the EEA or the UK, we rely on <strong>contract</strong> (providing the features and subscription you choose, including sending your photo or text to our AI providers when you use AI features) and <strong>legitimate interests</strong> (security, fair-use limits and usage statistics).</p>
 
 
 
@@ -356,7 +372,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">Our service providers may process information outside your country, including in the United States. Where required, these transfers are protected by safeguards such as the European Commission’s Standard Contractual Clauses.</p>
+<p class="wp-block-paragraph">Our server functions and database run in Google Cloud regions in the European Union (europe-west1, eur3). Our service providers may process information outside your country, including in the United States. Where required, these transfers are protected by safeguards such as the European Commission’s Standard Contractual Clauses.</p>
 
 
 
