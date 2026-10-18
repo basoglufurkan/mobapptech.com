@@ -1557,6 +1557,7 @@ body:not(.editor-styles-wrapper) .mt-header {
 .mt-app { --app-tint: #8b5cf6; }
 .mt-app--haunt { --app-tint: #ff8fd0; }
 .mt-app--icar { --app-tint: #60e473; }
+.mt-app--dating { --app-tint: #ff7a6b; }
 
 /*
  * Showcase (wide screens, enabled by JS): the copy of each app scrolls on the
@@ -1586,6 +1587,7 @@ body:not(.editor-styles-wrapper) .mt-header {
 .is-showcase > .mt-app:nth-of-type(1) .mt-app__copy { grid-row: 1; }
 .is-showcase > .mt-app:nth-of-type(2) .mt-app__copy { grid-row: 2; }
 .is-showcase > .mt-app:nth-of-type(3) .mt-app__copy { grid-row: 3; }
+.is-showcase > .mt-app:nth-of-type(4) .mt-app__copy { grid-row: 4; }
 
 .is-showcase .mt-app.is-active .mt-app__copy {
 	opacity: 1;
@@ -1596,7 +1598,7 @@ body:not(.editor-styles-wrapper) .mt-header {
 	position: sticky;
 	top: max(90px, calc(50vh - var(--stage-h) / 2));
 	grid-column: 2;
-	grid-row: 1 / span 3;
+	grid-row: 1 / span 4;
 	align-self: start;
 	box-sizing: border-box;
 	height: var(--stage-h);
@@ -2073,6 +2075,158 @@ body:not(.editor-styles-wrapper) .mt-header {
 
 .mt-app__stage--wide {
 	min-height: 520px;
+}
+
+/* Unannounced dating app: coral teaser card, blurred screen behind a "coming soon" veil. */
+.mt-app--dating {
+	background:
+		radial-gradient(120% 120% at 0% 0%, rgba(255, 122, 107, 0.24), transparent 50%),
+		radial-gradient(90% 90% at 100% 100%, rgba(255, 184, 107, 0.16), transparent 50%),
+		#120c0c;
+}
+
+.mt-app--dating .mt-app__tag {
+	color: #ff9d90;
+}
+
+.mt-app--dating .mt-app__halo {
+	background: conic-gradient(#ff7a6b, #ffb86b, #ff5ca8, #ff7a6b);
+	opacity: 0.34;
+}
+
+.mt-app--dating .mt-chips li:hover {
+	border-color: rgba(255, 122, 107, 0.55);
+	background: rgba(255, 122, 107, 0.12);
+}
+
+.mt-app--dating .mt-new--soon {
+	border-color: rgba(255, 122, 107, 0.4);
+	background: rgba(255, 122, 107, 0.12);
+	color: #ffc0b8;
+}
+
+.mt-app--dating .mt-new--soon::before {
+	background: #ff7a6b;
+	animation-name: mt-ping-pink;
+}
+
+.mt-icon--dating {
+	display: grid;
+	place-items: center;
+	background: linear-gradient(135deg, #ff5ca8 0%, #ff7a6b 55%, #ffb86b 100%);
+	color: #fff;
+}
+
+.mt-app__icon.mt-icon--dating {
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 20px 40px -12px rgba(255, 122, 107, 0.75);
+}
+
+.mt-icon--dating svg {
+	width: 52%;
+}
+
+.mt-dating {
+	padding: 0;
+	background:
+		radial-gradient(120% 55% at 0% 0%, rgba(255, 122, 107, 0.2), transparent 60%),
+		linear-gradient(180deg, #1c1112 0%, #0d090a 100%);
+}
+
+.mt-dating__blur {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 58px 14px 14px;
+	filter: blur(9px);
+	opacity: 0.75;
+}
+
+.mt-dating__card {
+	display: grid;
+	grid-template-columns: 54px 1fr;
+	grid-template-rows: auto auto;
+	column-gap: 12px;
+	row-gap: 8px;
+	align-items: center;
+	padding: 14px;
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.07);
+}
+
+.mt-dating__card i {
+	grid-row: span 2;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #ff9d90, #ff5ca8);
+}
+
+.mt-dating__card:nth-child(2) i { background: linear-gradient(135deg, #ffb86b, #ff7a6b); }
+.mt-dating__card:nth-child(3) i { background: linear-gradient(135deg, #b78cff, #ff8fd0); }
+
+.mt-dating__card b,
+.mt-dating__card small {
+	height: 9px;
+	border-radius: 9px;
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.mt-dating__card small {
+	width: 60%;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.mt-dating__veil {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 24px;
+	background: radial-gradient(70% 45% at 50% 50%, rgba(13, 9, 10, 0.75), transparent);
+	text-align: center;
+}
+
+.mt-dating__lock {
+	display: grid;
+	place-items: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #ff5ca8, #ff7a6b 55%, #ffb86b);
+	color: #fff;
+	box-shadow: 0 16px 40px -10px rgba(255, 122, 107, 0.8);
+	animation: mt-heartbeat 2.4s ease-in-out infinite;
+}
+
+.mt-dating__lock svg {
+	width: 30px;
+}
+
+.mt-dating__veil b {
+	font-size: 17px;
+	line-height: 1.25;
+	color: #fff;
+}
+
+.mt-dating__veil small {
+	padding: 4px 12px;
+	border: 1px solid rgba(255, 122, 107, 0.4);
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #ffc0b8;
+}
+
+@keyframes mt-heartbeat {
+	0%, 100% { transform: scale(1); }
+	12% { transform: scale(1.12); }
+	24% { transform: scale(1); }
+	36% { transform: scale(1.08); }
 }
 
 .mt-carplay {
