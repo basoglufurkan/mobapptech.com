@@ -399,6 +399,21 @@
 		{ passive: true }
 	);
 
+	/* ----------------------- App captures: load and play only while on screen */
+	if ( ! reduced ) {
+		const players = new IntersectionObserver(
+			( entries ) => entries.forEach( ( { target, isIntersecting } ) => {
+				if ( isIntersecting ) {
+					target.play().catch( () => {} );
+				} else {
+					target.pause();
+				}
+			} ),
+			{ rootMargin: '200px 0px' }
+		);
+		$$( 'video[data-autoplay]' ).forEach( ( video ) => players.observe( video ) );
+	}
+
 	/* ----------------------- App showcase: sticky device, scrolling copy */
 
 	const showcase = $( '.mt-showcase' );
