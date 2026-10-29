@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumora · Focus, and grow a universe</title>
+<meta name="description" content="Lumora turns every focus session into a star. Build constellations, discover worlds, and focus with a friend.">
+<!-- Once Lumora is on the App Store, add Safari's "Open / Get" banner:
+<meta name="apple-itunes-app" content="app-id=APP_STORE_ID">
+-->
+<meta property="og:title" content="Lumora · Focus, and grow a universe">
+<meta property="og:description" content="Every focus session becomes a star in a universe of your own.">
+<meta property="og:image" content="https://www.mobapptech.com/lumora/assets/icon.png">
+<link rel="apple-touch-icon" href="/lumora/assets/icon.png">
+<link rel="stylesheet" href="/lumora/assets/lumora.css">
+</head>
+<body>
+<main>
+  <img class="icon" src="/lumora/assets/icon.png" alt="Lumora" width="88" height="88">
+  <h1 data-en="Focus, and grow a universe" data-tr="Odaklan, evrenini büyüt">Focus, and grow a universe</h1>
+  <p data-en="Every focus session becomes a star. Days become constellations, and your sky keeps growing."
+     data-tr="Her odak seansı bir yıldız olur. Günler takımyıldızlara dönüşür, gökyüzün büyümeye devam eder.">Every focus session becomes a star. Days become constellations, and your sky keeps growing.</p>
+  <a class="soon" id="get" data-en="Lumora is coming soon to the App Store" data-tr="Lumora çok yakında App Store'da">Lumora is coming soon to the App Store</a>
+  <div class="shots">
+    <img data-shot="01-home" src="/lumora/assets/en-01-home.jpg" alt="Today's sky" loading="lazy">
+    <img data-shot="08-universe" src="/lumora/assets/en-08-universe.jpg" alt="Your universe" loading="lazy">
+    <img data-shot="02-focus" src="/lumora/assets/en-02-focus.jpg" alt="Preparing a focus session" loading="lazy">
+  </div>
+  <ul class="points">
+    <li data-en="<b>A star for every session.</b> Gentle timers, no streak guilt." data-tr="<b>Her seansa bir yıldız.</b> Nazik zamanlayıcılar, seri baskısı yok."><b>A star for every session.</b> Gentle timers, no streak guilt.</li>
+    <li data-en="<b>Odyssey.</b> Your focus fuels journeys to new worlds." data-tr="<b>Yolculuk.</b> Odağın yeni dünyalara yolculukların yakıtı olur."><b>Odyssey.</b> Your focus fuels journeys to new worlds.</li>
+    <li data-en="<b>Focus together.</b> Start a session with a friend from one link." data-tr="<b>Birlikte odaklan.</b> Tek bir bağlantıyla bir arkadaşınla seans başlat."><b>Focus together.</b> Start a session with a friend from one link.</li>
+    <li data-en="<b>Quiet apps.</b> Distracting apps rest until your star is born." data-tr="<b>Sessiz uygulamalar.</b> Dikkat dağıtan uygulamalar yıldızın doğana dek susar."><b>Quiet apps.</b> Distracting apps rest until your star is born.</li>
+    <li data-en="<b>Private.</b> No ads, no tracking. Your universe lives on your device and your own iCloud." data-tr="<b>Gizli.</b> Reklam yok, takip yok. Evrenin cihazında ve kendi iCloud'unda yaşar."><b>Private.</b> No ads, no tracking. Your universe lives on your device and your own iCloud.</li>
+  </ul>
+  <footer>
+    <a href="/lumora-privacy-policy/" data-en="Privacy policy" data-tr="Gizlilik politikası">Privacy policy</a> ·
+    <a href="/">mobapp tech</a>
+  </footer>
+</main>
+<script>
+  (function () {
+    "use strict";
+    // Fill in once Lumora is on the App Store, e.g. "6739000000".
+    var APP_STORE_ID = "";
+    var tr = (navigator.language || "").toLowerCase().indexOf("tr") === 0;
+    if (tr) {
+      document.documentElement.lang = "tr";
+      document.querySelectorAll("[data-tr]").forEach(function (el) {
+        // Only this page's own fixed strings, never anything from the URL.
+        el.innerHTML = el.getAttribute("data-tr");
+      });
+      document.querySelectorAll("[data-shot]").forEach(function (img) {
+        img.src = "/lumora/assets/tr-" + img.getAttribute("data-shot") + ".jpg";
+      });
+      document.title = "Lumora · Odaklan, evrenini büyüt";
+    }
+    if (APP_STORE_ID) {
+      var get = document.getElementById("get");
+      get.className = "button";
+      get.href = "https://apps.apple.com/app/id" + APP_STORE_ID;
+      get.textContent = tr ? "Lumora'yı App Store'dan indir" : "Get Lumora on the App Store";
+    }
+  })();
+</script>
+</body>
+</html>

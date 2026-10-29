@@ -4,8 +4,10 @@
       {
         "appIDs": ["N8227QGH4G.com.mobapptech.lumora"],
         "components": [
-          { "/": "/lumora/join/*", "comment": "Focus together invites" },
-          { "/": "/lumora/join", "comment": "Focus together invites" }
+          { "/": "/lumora/", "exclude": true, "comment": "The landing page stays on the web" },
+          { "/": "/lumora", "exclude": true },
+          { "/": "/lumora/assets/*", "exclude": true },
+          { "/": "/lumora/*", "comment": "Screens, focus setup and Focus together invites" }
         ]
       }
     ]

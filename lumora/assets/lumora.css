@@ -1,0 +1,33 @@
+:root { color-scheme: dark; --text: #F4F1FF; --soft: #B9B3D9; --faint: #8E88B3; --gold: #FFD58A; --ink: #1A1438;
+  --card: rgba(255, 255, 255, .07); --line: rgba(255, 255, 255, .14); }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100vh; padding: 32px 16px;
+  font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  color: var(--text); text-align: center;
+  background: radial-gradient(120% 70% at 50% 0%, #2A2160 0%, #0B0A1F 60%, #05050F 100%) fixed #05050F;
+}
+main { width: 100%; max-width: 400px; margin: 0 auto; }
+.icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 12px 40px rgba(124, 92, 255, .45); }
+.star { font-size: 44px; color: var(--gold); text-shadow: 0 0 24px rgba(255, 213, 138, .6); }
+h1 { font-size: 28px; line-height: 1.2; margin: 16px 0 8px; font-weight: 700; }
+p { margin: 0 0 22px; color: var(--soft); }
+.code {
+  font: 600 34px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em;
+  padding: 18px 12px; border-radius: 18px; margin-bottom: 22px; background: var(--card); border: 1px solid var(--line);
+}
+.button { display: block; padding: 16px; border-radius: 16px; font-weight: 600; text-decoration: none;
+  background: var(--gold); color: var(--ink); }
+.button.secondary { background: var(--card); color: var(--text); border: 1px solid var(--line); margin-top: 12px; }
+.soon { display: block; padding: 15px; border-radius: 16px; border: 1px dashed var(--line); color: var(--soft); }
+small { display: block; margin-top: 18px; color: var(--faint); font-size: 14px; }
+.shots { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 28px -16px; padding: 0 16px 8px; }
+.shots img { flex: 0 0 62%; max-width: 240px; border-radius: 22px; border: 1px solid var(--line); scroll-snap-align: center; }
+ul.points { list-style: none; padding: 0; margin: 0 0 28px; text-align: left; }
+ul.points li { padding: 12px 0 12px 30px; border-bottom: 1px solid var(--line); position: relative; color: var(--soft); }
+ul.points li::before { content: "✦"; color: var(--gold); position: absolute; left: 4px; }
+ul.points b { color: var(--text); font-weight: 600; }
+footer { margin-top: 32px; font-size: 13px; color: var(--faint); }
+footer a { color: var(--faint); }
+.button + .soon { margin-top: 12px; }

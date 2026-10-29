@@ -4,64 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Focus together · Lumora</title>
+<title>Lumora</title>
 <meta property="og:title" content="Focus together in Lumora ✦">
 <meta property="og:description" content="Tap to join the room and light a star together.">
-<style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
-    font: 17px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-    color: #F4F1FF; text-align: center;
-    background: radial-gradient(120% 80% at 50% 0%, #2A2160 0%, #0B0A1F 60%, #05050F 100%);
-  }
-  main { width: 100%; max-width: 380px; }
-  .star { font-size: 44px; color: #FFD58A; text-shadow: 0 0 24px rgba(255, 213, 138, .6); }
-  h1 { font-size: 26px; margin: 12px 0 6px; font-weight: 700; }
-  p { margin: 0 0 22px; color: #B9B3D9; }
-  .code {
-    font: 600 34px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em;
-    padding: 18px 12px; border-radius: 18px; margin-bottom: 22px;
-    background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .14);
-  }
-  a.button {
-    display: block; padding: 16px; border-radius: 16px; font-weight: 600; text-decoration: none;
-    background: #FFD58A; color: #1A1438;
-  }
-  small { display: block; margin-top: 18px; color: #8E88B3; font-size: 14px; }
-</style>
+<meta property="og:image" content="https://www.mobapptech.com/lumora/assets/icon.png">
+<link rel="apple-touch-icon" href="/lumora/assets/icon.png">
+<link rel="stylesheet" href="/lumora/assets/lumora.css">
 </head>
 <body>
 <main>
-  <div class="star" aria-hidden="true">✦</div>
-  <h1 id="title">Focus together</h1>
-  <p id="lead">A friend invited you to focus with them in Lumora.</p>
-  <div class="code" id="code" aria-label="Room code">——————</div>
-  <a class="button" id="open" href="#">Open in Lumora</a>
-  <small id="hint">Or open Lumora, tap Focus together and enter the code.</small>
+  <img class="icon" src="/lumora/assets/icon.png" alt="" width="88" height="88">
+  <h1 id="title">Lumora</h1>
+  <p id="lead">Focus, and grow a universe of your own.</p>
+  <div class="code" id="code" aria-label="Room code" hidden></div>
+  <a class="button" id="open" href="#" hidden>Open in Lumora</a>
+  <a class="button secondary" id="get" href="/lumora/">Get Lumora</a>
+  <small id="hint"></small>
+  <footer><a id="about" href="/lumora/">What is Lumora?</a></footer>
 </main>
-<script>
-  (function () {
-    var alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-    var raw = (new URLSearchParams(location.search).get("code") || "").toUpperCase();
-    var code = raw.split("").filter(function (c) { return alphabet.indexOf(c) >= 0; }).join("").slice(0, 6);
-    var tr = (navigator.language || "").toLowerCase().indexOf("tr") === 0;
-    if (tr) {
-      document.documentElement.lang = "tr";
-      document.getElementById("title").textContent = "Birlikte odaklan";
-      document.getElementById("lead").textContent = "Bir arkadaşın seni Lumora'da birlikte odaklanmaya davet etti.";
-      document.getElementById("open").textContent = "Lumora'da aç";
-      document.getElementById("hint").textContent = "Ya da Lumora'yı açıp Birlikte odaklan'a dokun ve kodu gir.";
-    }
-    if (code.length === 6) {
-      document.getElementById("code").textContent = code;
-      document.getElementById("open").href = "lumora://together/" + code;
-    } else {
-      document.getElementById("code").style.display = "none";
-      document.getElementById("open").style.display = "none";
-    }
-  })();
-</script>
+<script src="/lumora/assets/link.js"></script>
 </body>
 </html>
