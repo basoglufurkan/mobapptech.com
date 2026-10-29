@@ -2,8 +2,7 @@
 // directly (universal links); this page shows only when it doesn't.
 (function () {
   "use strict";
-  // Fill in once Lumora is on the App Store, e.g. "6739000000".
-  var APP_STORE_ID = "";
+  var APP_STORE_ID = window.LUMORA_APP_STORE_ID || "";
   var ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
   var CATEGORIES = ["study", "work", "coding", "reading", "creative"];
   var tr = (navigator.language || "").toLowerCase().indexOf("tr") === 0;

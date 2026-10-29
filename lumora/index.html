@@ -3,65 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lumora · Focus, and grow a universe</title>
+<title>Lumora</title>
 <meta name="description" content="Lumora turns every focus session into a star. Build constellations, discover worlds, and focus with a friend.">
-<!-- Once Lumora is on the App Store, add Safari's "Open / Get" banner:
+<!-- Once Lumora is on the App Store, uncomment and fill in the ID (same as
+     assets/config.js) for Safari's "Open / Get" banner:
 <meta name="apple-itunes-app" content="app-id=APP_STORE_ID">
 -->
-<meta property="og:title" content="Lumora · Focus, and grow a universe">
-<meta property="og:description" content="Every focus session becomes a star in a universe of your own.">
+<meta name="theme-color" content="#0B0A1F">
+<meta property="og:title" content="Lumora">
+<meta property="og:description" content="Focus, and grow a universe of your own.">
 <meta property="og:image" content="https://www.mobapptech.com/lumora/assets/icon.png">
+<link rel="icon" href="/lumora/assets/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="/lumora/assets/icon.png">
 <link rel="stylesheet" href="/lumora/assets/lumora.css">
+<style>
+  body { padding-top: max(40px, env(safe-area-inset-top)); }
+  .hero-icon { width: 120px; height: 120px; border-radius: 27px; box-shadow: 0 16px 56px rgba(124, 92, 255, .5); }
+  .name { font-size: 44px; letter-spacing: -.02em; margin: 18px 0 4px; }
+  .tagline { font-size: 21px; line-height: 1.3; color: var(--text); font-weight: 600; margin: 0 0 10px; }
+  .store {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-width: 230px; padding: 13px 24px; border-radius: 14px; text-decoration: none;
+    background: #000; color: #fff; border: 1px solid rgba(255, 255, 255, .55);
+    font-weight: 600; font-size: 18px; letter-spacing: -.01em;
+  }
+  .store svg { width: 22px; height: 22px; flex: none; fill: currentColor; margin-top: -3px; }
+  .store.soon { background: var(--card); border-style: dashed; border-color: var(--line); color: var(--soft); cursor: default; }
+  .open { display: inline-block; margin-top: 14px; color: var(--gold); font-size: 15px; text-decoration: none; }
+  .phone { display: block; width: 62%; max-width: 250px; margin: 34px auto 30px; border-radius: 30px;
+    border: 1px solid var(--line); box-shadow: 0 24px 80px rgba(0, 0, 0, .55); }
+  [dir="rtl"] ul.points { text-align: right; }
+  [dir="rtl"] ul.points li { padding: 12px 30px 12px 0; }
+  [dir="rtl"] ul.points li::before { left: auto; right: 4px; }
+</style>
 </head>
 <body>
 <main>
-  <img class="icon" src="/lumora/assets/icon.png" alt="Lumora" width="88" height="88">
-  <h1 data-en="Focus, and grow a universe" data-tr="Odaklan, evrenini büyüt">Focus, and grow a universe</h1>
-  <p data-en="Every focus session becomes a star. Days become constellations, and your sky keeps growing."
-     data-tr="Her odak seansı bir yıldız olur. Günler takımyıldızlara dönüşür, gökyüzün büyümeye devam eder.">Every focus session becomes a star. Days become constellations, and your sky keeps growing.</p>
-  <a class="soon" id="get" data-en="Lumora is coming soon to the App Store" data-tr="Lumora çok yakında App Store'da">Lumora is coming soon to the App Store</a>
-  <div class="shots">
-    <img data-shot="01-home" src="/lumora/assets/en-01-home.jpg" alt="Today's sky" loading="lazy">
-    <img data-shot="08-universe" src="/lumora/assets/en-08-universe.jpg" alt="Your universe" loading="lazy">
-    <img data-shot="02-focus" src="/lumora/assets/en-02-focus.jpg" alt="Preparing a focus session" loading="lazy">
-  </div>
-  <ul class="points">
-    <li data-en="<b>A star for every session.</b> Gentle timers, no streak guilt." data-tr="<b>Her seansa bir yıldız.</b> Nazik zamanlayıcılar, seri baskısı yok."><b>A star for every session.</b> Gentle timers, no streak guilt.</li>
-    <li data-en="<b>Odyssey.</b> Your focus fuels journeys to new worlds." data-tr="<b>Yolculuk.</b> Odağın yeni dünyalara yolculukların yakıtı olur."><b>Odyssey.</b> Your focus fuels journeys to new worlds.</li>
-    <li data-en="<b>Focus together.</b> Start a session with a friend from one link." data-tr="<b>Birlikte odaklan.</b> Tek bir bağlantıyla bir arkadaşınla seans başlat."><b>Focus together.</b> Start a session with a friend from one link.</li>
-    <li data-en="<b>Quiet apps.</b> Distracting apps rest until your star is born." data-tr="<b>Sessiz uygulamalar.</b> Dikkat dağıtan uygulamalar yıldızın doğana dek susar."><b>Quiet apps.</b> Distracting apps rest until your star is born.</li>
-    <li data-en="<b>Private.</b> No ads, no tracking. Your universe lives on your device and your own iCloud." data-tr="<b>Gizli.</b> Reklam yok, takip yok. Evrenin cihazında ve kendi iCloud'unda yaşar."><b>Private.</b> No ads, no tracking. Your universe lives on your device and your own iCloud.</li>
+  <img class="hero-icon" src="/lumora/assets/icon.png" alt="" width="120" height="120">
+  <h1 class="name">Lumora</h1>
+  <p class="tagline" id="tagline">Focus, and grow a universe of your own.</p>
+  <p id="lead">Every focus session becomes a star. Days turn into constellations, and your sky keeps growing.</p>
+  <a class="store" id="store" href="#">
+    <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+    <span id="store-label">Download on the App Store</span>
+  </a>
+  <br>
+  <a class="open" id="open" href="lumora://today">Already have Lumora? Open it</a>
+  <img class="phone" id="shot" src="/lumora/assets/en-01-home.jpg" alt="Lumora" width="250" height="543">
+  <ul class="points" id="points">
+    <li>A star for every focus session</li>
+    <li>Your focus fuels journeys to new worlds</li>
+    <li>Focus together with a friend</li>
+    <li>No ads, no tracking</li>
   </ul>
   <footer>
-    <a href="/lumora-privacy-policy/" data-en="Privacy policy" data-tr="Gizlilik politikası">Privacy policy</a> ·
+    <a id="privacy" href="/lumora-privacy-policy/">Privacy policy</a> ·
     <a href="/">mobapp tech</a>
   </footer>
 </main>
-<script>
-  (function () {
-    "use strict";
-    // Fill in once Lumora is on the App Store, e.g. "6739000000".
-    var APP_STORE_ID = "";
-    var tr = (navigator.language || "").toLowerCase().indexOf("tr") === 0;
-    if (tr) {
-      document.documentElement.lang = "tr";
-      document.querySelectorAll("[data-tr]").forEach(function (el) {
-        // Only this page's own fixed strings, never anything from the URL.
-        el.innerHTML = el.getAttribute("data-tr");
-      });
-      document.querySelectorAll("[data-shot]").forEach(function (img) {
-        img.src = "/lumora/assets/tr-" + img.getAttribute("data-shot") + ".jpg";
-      });
-      document.title = "Lumora · Odaklan, evrenini büyüt";
-    }
-    if (APP_STORE_ID) {
-      var get = document.getElementById("get");
-      get.className = "button";
-      get.href = "https://apps.apple.com/app/id" + APP_STORE_ID;
-      get.textContent = tr ? "Lumora'yı App Store'dan indir" : "Get Lumora on the App Store";
-    }
-  })();
-</script>
+<script src="/lumora/assets/config.js"></script>
+<script src="/lumora/assets/download.js"></script>
 </body>
 </html>

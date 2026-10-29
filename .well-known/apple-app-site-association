@@ -2,12 +2,26 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["N8227QGH4G.com.mobapptech.lumora"],
+        "appIDs": [
+          "N8227QGH4G.com.mobapptech.lumora"
+        ],
         "components": [
-          { "/": "/lumora/", "exclude": true, "comment": "The landing page stays on the web" },
-          { "/": "/lumora", "exclude": true },
-          { "/": "/lumora/assets/*", "exclude": true },
-          { "/": "/lumora/*", "comment": "Screens, focus setup and Focus together invites" }
+          {
+            "/": "/lumora/assets/*",
+            "exclude": true
+          },
+          {
+            "/": "/lumora",
+            "comment": "The download page: opens Lumora when it's installed"
+          },
+          {
+            "/": "/lumora/",
+            "comment": "The download page: opens Lumora when it's installed"
+          },
+          {
+            "/": "/lumora/*",
+            "comment": "Screens, focus setup and Focus together invites"
+          }
         ]
       }
     ]
