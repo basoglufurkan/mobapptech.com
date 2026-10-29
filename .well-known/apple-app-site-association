@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["N8227QGH4G.com.mobapptech.lumora"],
+        "components": [
+          { "/": "/lumora/join/*", "comment": "Focus together invites" },
+          { "/": "/lumora/join", "comment": "Focus together invites" }
+        ]
+      }
+    ]
+  }
+}
